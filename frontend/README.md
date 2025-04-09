@@ -1,3 +1,22 @@
+# 前端 - 人力资源管理系统
+
+这是使用 React 构建的前端部分，配合后端 Flask 服务进行数据交互。功能包括员工信息管理、文件上传、仪表盘展示等。
+
+## 项目结构
+
+- `client/`：React 应用主目录
+  - 使用 [Create React App](https://create-react-app.dev/) 搭建
+  - 所有源代码位于 `src/` 目录中
+
+## 快速开始
+
+```bash
+cd frontend/client
+npm install
+npm start
+
+
+
 ├── frontend/
 │   ├── README.md                # 前端说明
 │   └── client/                  # 前端 React 应用

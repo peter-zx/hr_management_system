@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: hr_backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "5000:5000"
+    command: >
+      sh -c "pip install -r requirements.txt && python run.py"
+    environment:
+      - FLASK_ENV=development
+
+  frontend:
+    build:
+      context: ./frontend/client
+    container_name: hr_frontend
+    volumes:
+      - ./frontend/client:/app
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+    command: >
+      sh -c "npm install && npm start"
